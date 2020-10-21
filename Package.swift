@@ -23,5 +23,14 @@
 import PackageDescription
 
 let package = Package(
-  name: "Instructions"
+    name: "Instructions",
+    platforms: [
+        .iOS(.v10)
+    ],
+    products: [
+        .library(name: "Instructions", targets: ["Instructions"])
+    ],
+    targets: [
+        .target(name: "Instructions", path: "Sources")
+    ]
 )
